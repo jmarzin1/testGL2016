@@ -1,0 +1,3 @@
+assert empeche la suite de l'exécution du programme.
+On peut désactiver tous les assert à la compilation.
+

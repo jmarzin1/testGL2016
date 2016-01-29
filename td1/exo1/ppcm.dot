@@ -1,0 +1,32 @@
+digraph CFG {
+	size="7.5,10";
+	center=true;
+	labelloc=top;
+	label="Function: ppcm";
+	fontname=Arial; fontsize=12;
+	edge[fontname=Arial,fontsize=10];
+	node[fontname=Arial,fontsize=9];
+	N0[color="green",label="Entry"];
+	N0 -> N1[weight=0.1];
+	N1[label="p = (x * y);"];
+	N1 -> N2[weight=0.1];
+	N2[label="switch (p \> x)"];
+	N2 -> N3[label="*"];
+	N2 -> N4[label="0"];
+	N4[label="return mincm;"];
+	N4 -> N5[weight=0.1];
+	N5[color="red",label="Exit"];
+	N3[label="switch (p \> y)"];
+	N3 -> N6[label="*"];
+	N3 -> N4[label="0"];
+	N6[label="switch ((p % x) == 0)"];
+	N6 -> N7[label="*"];
+	N6 -> N8[label="0"];
+	N8[label="p = (p - 1);"];
+	N8 -> N2[weight=0.1];
+	N7[label="switch ((p % y) == 0)"];
+	N7 -> N9[label="*"];
+	N7 -> N8[label="0"];
+	N9[label="mincm = p;"];
+	N9 -> N8[weight=0.1];
+}

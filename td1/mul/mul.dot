@@ -1,0 +1,26 @@
+digraph CFG {
+	size="7.5,10";
+	center=true;
+	labelloc=top;
+	label="Function: mul";
+	fontname=Arial; fontsize=12;
+	edge[fontname=Arial,fontsize=10];
+	node[fontname=Arial,fontsize=9];
+	N0[color="green",label="Entry"];
+	N0 -> N1[weight=0.1];
+	N1[label="switch (b \> 0)"];
+	N1 -> N2[label="*"];
+	N1 -> N3[label="0"];
+	N3[label="return m;"];
+	N3 -> N4[weight=0.1];
+	N4[color="red",label="Exit"];
+	N2[label="switch ((b % 2) == 1)"];
+	N2 -> N5[label="*"];
+	N2 -> N6[label="0"];
+	N6[label="a = (a * 2);"];
+	N6 -> N7[weight=0.1];
+	N7[label="b = (b / 2);"];
+	N7 -> N1[weight=0.1];
+	N5[label="m = (m - a);"];
+	N5 -> N6[weight=0.1];
+}

@@ -1,0 +1,22 @@
+Quand on crée une méthode de test : on appelle ça aussi créer un lanceur.
+
+L'ordre de test dépend de la stratégie d'intégration.
+
+Bottom-up du bas vers le haut.
+Big-bang dans tous les sens (un peu au hasard).
+Top-Down du haut vers le bas.
+
+
+Avantages // inconvénients
+Qd on teste une feuille, il faut écrire bcp de lanceurs. On va bcp tester la pièce la plus basse et peu tester la pièce la plus haute.
+On teste bcp les plus réutilisables. (Donc en fait déjà ceux le plus testés)
+Convient moins au prototypage.
+
+À l'inverse, en commençant par le plus haut, on doit simuler les branches du dessous. On doit écrire bcp de stum//mock. On teste le plus le comportement nominal de l'appli. Cela correspond aussi pas mal aux techniques de prototypage.
+
+
+Exercice 1
+
+1) Il faut que le mock objet ait le même type que le vrai objet, les mêmes méthodes avec même type de retour et même paramètres et même attributs.
+
+2) Il faut changer le constructeur, et passer les objets Buffer et killRing en paramètres.

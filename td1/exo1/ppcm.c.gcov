@@ -1,0 +1,19 @@
+        -:    0:Source:ppcm.c
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        2:    1:int ppcm (int x, int y) {
+        -:    2:  int p, mincm;
+        -:    3:
+        2:    4:  p = x*y;
+        7:    5:  while((p > x) && (p > y)) {
+        3:    6:    if ((p%x==0) && (p%y == 0)) {
+        1:    7:      mincm = p;
+        -:    8:    }
+        3:    9:    p = p-1;
+        -:   10:  }
+        -:   11:
+        2:   12:  return mincm;
+        -:   13:
+        -:   14:}
