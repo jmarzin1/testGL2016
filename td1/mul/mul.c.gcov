@@ -1,0 +1,24 @@
+        -:    0:Source:mul.c
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:5
+        -:    0:Programs:1
+function mul called 5 returned 100% blocks executed 100%
+        5:    1:int mul(int a, int b) {
+        5:    2:  int m = 0;
+        -:    3:
+       19:    4:  while (b > 0) {
+branch  0 taken 64%
+branch  1 taken 36% (fallthrough)
+        9:    5:    if (b%2 ==1) {
+branch  0 taken 67% (fallthrough)
+branch  1 taken 33%
+        6:    6:      m = m+a;
+        6:    7:      b-=1;
+        -:    8:    }
+        9:    9:    a = a * 2;
+        9:   10:    b = b/2;
+        -:   11:  }
+        -:   12:
+        5:   13:  return m;
+        -:   14:}
