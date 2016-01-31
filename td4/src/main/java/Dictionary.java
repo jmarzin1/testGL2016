@@ -21,6 +21,7 @@ public class Dictionary implements IDictionary {
 
     public void addTranslation(String nameFr, List<String> namesEng) {
         if (translations.containsKey(nameFr)){
+            //if the words arleady has translations, we check if we want to add new translations
             Collection<String> translationsCollection = getTranslation(nameFr);
             translations.remove(nameFr);
             for (String name : namesEng){
